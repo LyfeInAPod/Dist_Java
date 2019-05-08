@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Shopping Cart</title>
+        		<style>
+#cartt {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#cartt td, #cartt th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#cartt tr:nth-child(even){background-color: #f2f2f2;}
+
+#cartt tr:hover {background-color: #ddd;}
+
+#cartt th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #074383;
+  color: white;
+}
+input[type=submit]{
+  background-color: #2B9BAF;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#btn{
+  background-color: #69B04C;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+    </head>
+    <body>
+
+        <h1>Welcome to My Shopping Cart</h1>
+        
+        <form action="ShoppingCardServlet" method="POST">
+            
+        <p>Customer: <select name="slCustomer">
+                
+                <option value="1"> Customer1</option>
+                
+                <option value="2"> Customer2</option>
+                
+                <option value="3"> Customer3</option>
+                
+
+            </select>
+        </p>
+        <p>Payment Method: <input type="text" name="txtMethod" value="Cash" /></p>
+        <table id="cartt" border="0">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+                <tr>
+                    <td>P2</td>
+                    <td>2</td>
+                    <td>200</td>
+                </tr>
+                
+        </tbody>
+    </table>
+
+    <p>Total: 400</p>
+    <p><input type="submit" value="Confirm" value ="confirm" /></p>
+    </form>
+     <p><a href="product.jsp"><input id="btn" type="submit" value="Back to Buy" /></a></p>
+</body>
+</html>
