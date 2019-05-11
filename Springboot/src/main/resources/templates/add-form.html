@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Add Genre</title>
+<link href="../static/css/bootstrap.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap.min.css}" media="screen"></link>
+<link href="../static/css/all.css" rel="stylesheet"
+	th:href="@{/css/all.css}" media="screen"></link>
+</head>
+<body>
+	<div class="container my-5">
+		<h2 class="mb-5">Add New Genre</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<form action="#" th:action="@{/moviegenre/add}"
+					th:object="${moviegenre}" method="post">
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="genre" class="col-form-label">Genre</label> <input
+								type="text" th:field="*{genre}" class="form-control" id="genre"
+								placeholder="Enter Genre here"> <span
+								th:if="${#fields.hasErrors('genre')}" th:errors="*{genre}"
+								class="text-danger" th:required="true"></span>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="rating" class="col-form-label">Rating</label> <input
+								type="number" th:field="*{Rating}" class="form-control"
+								id="rating"> <span
+								th:if="${#fields.hasErrors('rating')}" th:errors="*{genre}"
+								class="text-danger" th:required="true"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mt-5">
+							<input type="submit" class="btn btn-primary" value="Add Genre">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
